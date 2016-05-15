@@ -1,4 +1,4 @@
-require 'activerecord-reset-pk-sequence/version'
+require 'activerecord_reset_pk_sequence/version'
 
 module ActiveRecord
   class Base
