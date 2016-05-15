@@ -1,4 +1,4 @@
-# active-reset-pk-sequence
+# Active reset primary key sequence
 
 This gem allows resetting the id of an AR table to 0. It is useful after a delete_all command. It works in Postgres, Sqlite and MySQL up to now.
 
@@ -25,7 +25,7 @@ The first thing is to install the gem as it is explained before.
 After that you need a model. If you don't have one you can create it directly with rails as shown.
 
     rails g model Person name:string
-    
+
 Then you do a database migration with:
 
     rake db:migrate
@@ -47,7 +47,7 @@ If you create a new person now you will notice that the id is going to be 3
 
     p = Person.create(:name => 'Peter')
     id = p.id
-    => 3 
+    => 3
 
 
 And this is what this gem is for, to reset the id's after deleting the elements in a table, to check if it works delete all elements and then run reset_pk_sequence method, after that create a new "Person" and check if its id is 1.
