@@ -6,7 +6,7 @@ This gem allows resetting the id of an AR table to 0. It is useful after a delet
 
 Add this line to your application's Gemfile:
 
-    gem 'activerecord-reset-pk-sequence'
+    gem 'activerecord_reset_pk_sequence'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install activerecord-reset-pk-sequence
+    $ gem install activerecord_reset_pk_sequence
 
 ## Usage
 
