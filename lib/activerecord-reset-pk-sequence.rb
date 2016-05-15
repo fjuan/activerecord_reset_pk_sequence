@@ -1,4 +1,4 @@
-require "activerecord-reset-pk-sequence/version"
+require 'activerecord-reset-pk-sequence/version'
 
 module ActiveRecord
   class Base
@@ -14,10 +14,9 @@ module ActiveRecord
         ActiveRecord::Base.connection.execute(update_seq_sql)
       when 'PostgreSQL'
         ActiveRecord::Base.connection.reset_pk_sequence!(table_name)
-      else 
-        raise "Task not implemented for this DB adapter"
-      end 
+      else
+        raise 'Task not implemented for this DB adapter'
+      end
     end
   end
 end
-
