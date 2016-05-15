@@ -9,8 +9,8 @@ Gem::Specification.new do |gem|
   gem.homepage      = 'https://github.com/fjuan/activerecord-reset-pk-sequence'
   gem.license       = 'MIT'
 
-  gem.files         = `git ls-files`.split($\)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.files         = %x{git ls-files}.split($OUTPUT_RECORD_SEPARATOR)
+  gem.executables   = gem.files.grep(%r{^bin/}).map { |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = 'activerecord-reset-pk-sequence'
   gem.require_paths = ['lib']
